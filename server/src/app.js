@@ -3,7 +3,9 @@ import morgan from 'morgan'
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
 
-import mainRoutes from './routes/index.routes.js'
+import indexRoutes from './routes/index.routes.js'
+import fincasRoutes from './routes/fincas.routes.js'
+import tasksRoutes from './routes/tasks.routes.js'
 
 const app = express()
 
@@ -25,6 +27,8 @@ const corsOptions = {
 }
 app.use(cors(corsOptions))
 
-app.use(mainRoutes)
+app.use(indexRoutes)
+app.use("/fincas/", fincasRoutes)
+app.use(tasksRoutes) // Hay q integrarle el "middleware" en la ruta
 
 export default app

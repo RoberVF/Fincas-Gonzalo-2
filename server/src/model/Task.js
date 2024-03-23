@@ -2,7 +2,9 @@ import mongoose from 'mongoose'
 
 const taskSchema = mongoose.Schema({
     finca: {
-        type: String,
+        //Finca de referencia (relacion uno a uno)
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Finca',
         required: true
     },
     production: {
@@ -20,3 +22,5 @@ const taskSchema = mongoose.Schema({
 }, {
     timestamps: true
 })
+
+export default mongoose.model("Task", taskSchema)

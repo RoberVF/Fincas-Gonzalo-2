@@ -1,5 +1,4 @@
 import Finca from '../model/Finca.js'
-import Fincas from '../model/Finca.js'
 
 export const getFincas = async (req, res) => {
     const fincas = await Fincas.find({})
