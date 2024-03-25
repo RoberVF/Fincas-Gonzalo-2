@@ -12,7 +12,13 @@ const fincaSchema = new mongoose.Schema({
     dimentions: {
         type: Number,
         required: false,
-    }
+    },
+    tasks: [{
+        id: {
+            type: mongoose.Schema.ObjectId,
+            ref: "Task"
+        },
+    }]
 }, {
     timestamps: true
 })
