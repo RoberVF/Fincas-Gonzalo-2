@@ -28,6 +28,6 @@ const corsOptions = {
 app.use(cors(corsOptions))
 
 app.use(indexRoutes)
-app.use("/fincas/", fincasRoutes, tasksRoutes)
+app.use("/api/fincas/", fincasRoutes, tasksRoutes)
 
 export default app
