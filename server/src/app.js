@@ -28,7 +28,6 @@ const corsOptions = {
 app.use(cors(corsOptions))
 
 app.use(indexRoutes)
-app.use("/fincas/", fincasRoutes)
-app.use(tasksRoutes) // Hay q integrarle el "middleware" en la ruta
+app.use("/fincas/", fincasRoutes, tasksRoutes)
 
 export default app

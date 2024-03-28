@@ -1,15 +1,15 @@
 import {Router} from 'express'
 
-import { getFincas, getFincaTask } from '../controllers/fincas.controller.js'
+import { getAllFincas, getFinca, createFinca } from '../controllers/fincas.controller.js'
 
 const route = Router()
 
-//Rutas de las fincas
-route.get("", getFincas)
+//Rutas de las fincas. .../fincas/...
 
-const fincas = ["tempranillo", "almendro", "fondo", "chica", "calvaritos"]
-for(let i = 0; i < fincas.length; i++){
-    route.get(`/${fincas[i]}`, getFincaTask(`Finca ${fincas[i]}`))
-}
+route.get("/", getAllFincas)
+
+route.get("/:fincaName", getFinca)
+
+route.post("/createFinca", createFinca)
 
 export default route
