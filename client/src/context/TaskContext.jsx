@@ -1,51 +1,9 @@
-import { createContext, useState, useContext } from "react"
-import {createTaskRequest, getTasksRequest} from '../api/tasks'
+import { createContext } from "react"
 
-const TaskContext = createContext()
+export const TaskContext = createContext()
 
-export const useTasks = () => {
-    // const context = useContext(TaskContext)
+// Para permitir el Fast Refresh, no exporto varias funciones en el mismo archivo,
+// sino que prefiero crear para el context de Task 3 archivos.
 
-    // if(!context){
-    //     throw new Error ("No context on useTasks!")
-    // }
-
-    // return context
-    try{
-        return useContext(TaskProvider)
-    } catch(e){
-        throw new Error("No context on useTasks!")
-        console.log(e)
-    }
-}
-
-export function TaskProvider({children}){
-    const [tasks, setTasks] = useState([])
-
-    const getTasks = async () => {
-        try{
-            const res = await getTasksRequest()
-            setTasks(res.data)
-        } catch(e){
-            console.log(e)
-        }
-    }
-
-    const createTask = async (task) => {
-        // try{
-        //     await createTaskRequest(task)
-        // } catch(e){
-        //     console.log(e)
-        // }
-        const response = await createTaskRequest(task)
-        console.log(response)
-    }
-
-    return (
-        <TaskContext.Provider value={{tasks, getTasks, createTask}}>
-            {children}
-        </TaskContext.Provider>
-
-    )
-
-}
+// En este caso, solamente tengo el context de Task, sino habria que agruparlos 
+// en una misma carpeta p.e. TaskContext/

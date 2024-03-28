@@ -11,6 +11,8 @@ export const createTask = async (req, res) => {
         const finca = await Finca.findOne({name: fincaName})
 
         if(!finca){
+            console.log("Req.body: ", req.body)
+            console.log("Finca:", finca)
             return res.status(404).json({"message": "Finca no encontrada"})
         }
 

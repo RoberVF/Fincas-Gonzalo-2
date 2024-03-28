@@ -1,9 +1,9 @@
 import axios from 'axios'
 
-const URL = "localhost:3000"
+const URL = "http://localhost:3000"
 
 const instance = axios.create({
-    baseURL: URL,
+    baseURL: `${URL}/api/fincas`,
     credentials: true
 })
 

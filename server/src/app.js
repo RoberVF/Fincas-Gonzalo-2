@@ -7,6 +7,8 @@ import indexRoutes from './routes/index.routes.js'
 import fincasRoutes from './routes/fincas.routes.js'
 import tasksRoutes from './routes/tasks.routes.js'
 
+import {FRONTEND_URL} from './config.js'
+
 const app = express()
 
 app.use(morgan('dev'))
