@@ -1,5 +1,5 @@
 import { useState } from "react"
-import {getTask, createTask} from '../api/tasks'
+import {getTask, createTask} from '../../api/routes'
 
 import PropTypes from 'prop-types'
 

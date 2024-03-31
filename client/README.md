@@ -1,8 +1,8 @@
-# React + Vite
+# Fincas-Gonzalo-2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Commodo sit excepteur adipisicing sint ea dolore. Officia voluptate aliqua ex pariatur voluptate ut veniam magna tempor elit eu ad ad pariatur. Exercitation culpa nisi ex qui in. Cupidatat est Lorem consequat Lorem amet quis nisi ipsum. Est aute aliqua anim amet aliqua qui et mollit mollit ullamco laborum.
 
-Currently, two official plugins are available:
+## Estructura de Paginas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- /HomePage
+- /Fincas
